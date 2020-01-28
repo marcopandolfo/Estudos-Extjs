@@ -1,0 +1,46 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css">
+    <script type="text/javascript" src="../extjs/ext-all.js"></script>	
+</head>
+<body>
+    
+</body>
+
+<script type="text/javascript">
+    
+    Ext.define('Aula08.componente.MeuBotao', {
+        extend: 'Ext.button.Button',
+        
+        // Alias sempre em tudo minusculo
+        alias: 'widget.meubotao',
+        
+        initComponent: function () {
+            this.text = 'Meu Botãooo';
+            this.callParent();
+        }
+    });
+    
+    Ext.onReady(function () {
+        Ext.widget('meubotao', {
+            renderTo: Ext.getBody()
+        });
+        
+        Ext.create('Ext.window.Window', {
+            title: 'Hello',
+            height: 200,
+            width: 400,
+            items: {
+                xtype: 'button',
+                text: 'kk eae',
+                onClick: function () {
+                    Ext.Msg.alert('Clicou', 'Parece que você clicou no botão!.');
+                }
+            }
+        }).show();
+    });
+
+</script>
+
+</html>

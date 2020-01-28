@@ -1,0 +1,28 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../extjs/resources/css/ext-all.css">
+	<script type="text/javascript" src="../extjs/ext-all.js"></script>	
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="panelCt"></div>
+</body>
+
+	<script type="text/javascript">
+	//Ext.onReady(function(){
+	$(document).ready(function(){	
+
+		Ext.create('widget.panel', {
+	        renderTo: 'panelCt',
+	        title: 'ExtJS 4 Panel',
+	        width: 400,
+	        height: 300,
+	        frame: true,
+	        html: "<div id='contentID'></div>"
+	    });
+		
+		$('#contentID').load('content.html');
+	});
+	</script>
+
+</html>
